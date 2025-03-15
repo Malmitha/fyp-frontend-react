@@ -1,0 +1,130 @@
+.second-title {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+/* Page Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Center Content Initially */
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 40px;
+  transition: max-width 0.3s ease-in-out;
+}
+
+/* When a date is selected, expand the container */
+.content-container.expanded {
+  max-width: 900px;
+  /* Expands to fit both calendar and analytics */
+  justify-content: 20px;
+}
+
+/* Calendar Box */
+.calendar-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Shift Calendar Left When Analytics Appears */
+.content-container.expanded .calendar-box {
+  transform: translateX(-30px);
+}
+
+/* Analytics Box (Appears Only When a Date is Selected) */
+.analytics-container {
+  background: none;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 400px;
+  transition: opacity 0.3s ease-in-out;
+  max-width: 100%;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+/* Title for Analytics */
+.analytics-title {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+/* Card for Daily Log */
+.log-card {
+  background: white;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.log-card h3 {
+  font-family: "Pacifico", cursive;
+  margin-bottom: 10px;
+  color: #5500ff;
+}
+
+.log-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #514545;
+}
+
+/* Card for Mood Log */
+.mood-card {
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mood-card h3 {
+  font-family: "Pacifico", cursive;
+  margin-bottom: 10px;
+  color: #5500ff;
+}
+
+.mood-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #514545;
+}
+
+/* Emoji and Mood Styling */
+.mood-card p strong {
+  color: #666;
+}
+
+.mood-card p {
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.log-message {
+  font-size: 14px;
+  color: #534e4e;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Comic Sans MS", cursive;
+  font-style: italic;
+}

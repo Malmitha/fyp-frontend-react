@@ -1,0 +1,134 @@
+/* Feedback Container */
+.feedback-container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+}
+
+/* Feedback Box (Updated to show chat and have scroll) */
+.feedback-box {
+  width: 83%;
+  height: 400px; /* Set a fixed height */
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  overflow-y: auto; /* Enables scrolling when content exceeds the height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Chat Message Styling */
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;  /* Space between messages */
+  padding-bottom: 10px;
+}
+
+/* Chat Message Paragraph */
+.chat-messages p {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Feedback Form (unchanged) */
+.feedback-form {
+  background: rgb(255, 252, 201);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Chat Input Box - For User Messages */
+.chat-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.chat-input input {
+  width: 80%;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.chat-input button {
+  padding: 10px;
+  background-color: #4CAF50;  /* Green button color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Flex container to position thumbs */
+.feedback-icons {
+  display: flex;
+  gap: 200px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Style for thumb icons */
+.thumb-icon {
+  font-size: 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column; /* Stack the icon and text */
+  align-items: center;
+}
+
+/* Hover effect for thumbs */
+.thumb-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Text under each thumb icon */
+.thumb-text {
+  font-size: 14px;
+  margin-top: 5px; /* Adds space between the icon and text */
+  text-align: center;
+  color: #000000; /* Optional: Adjust the color */
+}
+
+/* Style for Back Icon */
+.back-icon {
+  font-size: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover effect for Back Icon */
+.back-icon:hover {
+  opacity: 0.7; /* Slight fade effect on hover */
+}
+
+/* Show "Go to Dashboard" text on hover */
+.back-icon::after {
+  content: "Go to Dashboard";
+  position: absolute;
+  top: 60px; /* Move it a bit further down */
+  left: 50%;
+  transform: translateX(-50%); /* Center the text */
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hover effect to show text */
+.back-icon:hover::after {
+  opacity: 1;
+  transform: translate(-50%, 5px); /* Center the text and move it slightly down */
+}

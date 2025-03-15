@@ -1,0 +1,49 @@
+/* Mood Form Styles */
+.mood-form {
+  max-width: 800px; /* Adjust width */
+  margin: auto; /* Center form */
+}
+
+/* Form Labels */
+.form-label .ant-form-item-label {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+/* Input Fields */
+.small-input {
+  width: 80px; /* Keeps input fields narrow */
+  text-align: right;
+}
+
+/* Sliders */
+.wide-slider {
+  width: 100%; /* Ensures sliders align properly */
+}
+
+/* Submit Button */
+.mood-submit-button {
+  display: block;
+  font-family: "Comic Sans MS", cursive;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+p {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 20px;
+}
+
+.container-predict {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  text-align: center;
+  background: linear-gradient(130deg, #FFF42C, #EDDCD4, #BFFDF9);
+}
